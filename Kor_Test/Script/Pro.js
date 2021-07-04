@@ -31,7 +31,7 @@ async function rewrite() {
               const fileSize = latestXml.getXmlAttr(file,"Size");
               body = body.setXmlAttr(file,"FileCRC",fileCRC).setXmlAttr(file,"CRC",fileCRC).setXmlAttr(file,"Size",fileSize);
           }
-          notifyAndSetValue('补丁下载完成即可完成汉化','true');
+          notifyAndSetValue('补丁下载完成即可完成汉化,注意该补丁未授权任何企业/个人进行商用,侵权必究','true');
           //console.log(body);
           $done({body:body});
       }
@@ -68,7 +68,7 @@ function notifyAndSetValue(msg,success){
 }
 
 function redirect() {
-  const github_path = 'https://raw.githubusercontent.com/MapleRen/MapleStoryM-language/master/Kor_Test';
+  const github_path = 'https://raw.githubusercontent.com/MapleRen/MapleStoryM-language/master/Kor_Test/';
   const need_redirect = $prefs.valueForKey(config.prefix);
   const file_name = $request.url.slice($request.url.lastIndexOf('@') + 1);
   if (need_redirect == 'true') {
