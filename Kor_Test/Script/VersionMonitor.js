@@ -7,7 +7,7 @@
 *\/5 * * * * VersionMonitor.js
 远程
 [task_local]
-*\/5 * * * * https://raw.githubusercontent.com/MapleRen/MapleStoryM-language/master/Kor/QuantumultX/VersionMonitor.js
+*\/5 * * * * https://raw.githubusercontent.com/Mzwxiaowei/mzw/master/Kor/QuantumultX/VersionMonitor.js
 */
 
 var config = {
