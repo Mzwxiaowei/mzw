@@ -6,7 +6,7 @@ const isRedirect = $request.url.indexOf('_1/') > -1;
 const mode = $prefs.valueForKey('maplem-kr-mode');//汉化模式
 const isNeedRedirect = 'maplem-kr_redirect';//是否资源重定向
 const config = {
-    API:'https://raw.githubusercontent.com/MapleRen/MapleStoryM-language/master/xml/mod_pro.xml',
+    API:'https://raw.githubusercontent.com/Mzwxiaowei/mzw/master/xml/mod_pro.xml',
     title:'冒险岛M韩服汉化',
     files :$prefs.valueForKey('maplem-kr-files')//汉化模式
 }
@@ -69,7 +69,7 @@ function notifyAndSetValue(title,msg,success,prefix){
 }
 
 function redirect() {
-    const github_path = 'https://raw.githubusercontent.com/MapleRen/MapleStoryM-language/master/';
+    const github_path = 'https://raw.githubusercontent.com/Mzwxiaowei/mzw/master/';
     const need_redirect = $prefs.valueForKey(isNeedRedirect);
     const file_name = $request.url.slice($request.url.lastIndexOf('@') + 1);
     if (need_redirect == 'true' && config.files.indexOf(file_name)>-1) {
